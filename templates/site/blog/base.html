@@ -1,25 +1,7 @@
 {% extends 'site/base.html' %}
 
 {% block stage %}
-          
-        <div class="row marl blog-banner">
-            <div class="container">
-               <article>
-                  <div class="hgroup">
-                     <div class="heading_cover">
-                        <h2>Recent <span>Blog</span></h2>
-                     </div>
-                     <div class="heading_cover">
-                        <h3>Discussion that will never ends at all</h3>
-                     </div>
-                     <div class="heading_cover">
-                        <h4>Micropyramid is an innovative Digital/Design agency.</h4>
-                     </div>
-                  </div>
-               </article>
-            </div>
-         </div>
-              
+
           <div class="container" id="blog">
         <div class="row">
           
@@ -105,7 +87,7 @@
                   <h3 class="widget-title"><span>Recent Comments</span></h3>
                   <ul id="recentcomments">
                   {% for comment in comments %}
-                     <li class="recentcomments">{{comment.name}} &thinsp; <a href="/blog/{{post.slug}}/add-comment">{{comment.created|date:"M d Y"}}</a></li>
+                     <li class="recentcomments">{{comment.name}} &thinsp; <a href="/blog/{{comment.post.slug}}/">{{comment.created|date:"M d Y"}}</a></li>
                   {% endfor %}   
                   </ul> 
                </div>
